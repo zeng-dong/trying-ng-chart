@@ -10,7 +10,7 @@ import { Label, SingleDataSet } from 'ng2-charts';
 export class PieDoughnutChartComponent implements OnInit {
 
   chartType: ChartType = "pie";
-  chartLabels: Label[] = [['YES'], ['NO'], 'N/A'];
+  chartLabels: Label[] = ['YES', 'NO', 'N/A'];
   chartData: SingleDataSet = [80, 15, 5];
 
   constructor() { }
