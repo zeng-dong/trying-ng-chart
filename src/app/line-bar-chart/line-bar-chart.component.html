@@ -3,6 +3,9 @@
     [datasets]="chartData"
     [labels]="chartLabels"
     [chartType]="chartType"
+    [colors]="chartColors"
+    (chartClick)="onChartClick($event)"
+    (chartHover)="onChartHover($event)"
     >
 
   </canvas>
