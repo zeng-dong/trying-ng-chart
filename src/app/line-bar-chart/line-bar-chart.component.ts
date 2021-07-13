@@ -56,8 +56,23 @@ export class LineBarChartComponent implements OnInit {
   }
 
   onChartHover(event: any){
-
-
     this.chartColors[0].borderColor = "red";
+  }
+
+  colors = ['red', 'green', 'blue', 'yellow', 'purple'];
+  colorIndex = 0;
+
+  randomColor(event: any){
+
+
+    const rand = this.getRandomInt(0, 5);
+    console.log(rand);
+    this.chartColors[1].backgroundColor = this.colors[rand];
+  }
+
+  getRandomInt(min: number, max: number  ) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
   }
 }
